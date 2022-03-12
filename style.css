@@ -1,0 +1,128 @@
+/* CSS HEX */
+:root {
+    --russian-violet: #301a4bff;
+    --maximum-blue-purple: #9f9fedff;
+    --vermilion: #e03616ff;
+    --unbleached-silk: #ffd9ceff;
+    --snow: #fcf7f8ff;
+}
+
+/* SCSS Gradient */
+/* $gradient-top: linear-gradient(0deg, #301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff);
+$gradient-right: linear-gradient(90deg, #301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff);
+$gradient-bottom: linear-gradient(180deg, #301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff);
+$gradient-left: linear-gradient(270deg, #301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff);
+$gradient-top-right: linear-gradient(45deg, #301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff);
+$gradient-bottom-right: linear-gradient(135deg, #301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff);
+$gradient-top-left: linear-gradient(225deg, #301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff);
+$gradient-bottom-left: linear-gradient(315deg, #301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff);
+$gradient-radial: radial-gradient(#301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff); */
+
+
+/* CODE */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    border: 1px solid orange;
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo {
+    text-decoration: none;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.child {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 100vh;
+}
+
+.child:first-child {
+    height: 85vh;
+}
+
+
+.a {
+    background-color: var(--maximum-blue-purple);
+    display: flex;
+}
+
+.a .about-info {
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    justify-content: center;
+}
+
+.a .profile-photo {
+    flex-basis: 45%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.profile-photo .photo-wrapper {
+    width: 60%;
+    position: relative;
+    z-index: 0;
+}
+
+.photo-wrapper img {
+    width: 350px;
+    z-index: 1;
+
+}
+
+.photo-wrapper .photo-shadow {
+    width: 350px;
+    height: 350px;
+    border: 2px solid var(--snow);
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: -1;
+}
+
+.b {
+    background-color: var(--unbleached-silk);
+}
+
+.c {
+    background-color: var(--maximum-blue-purple);
+}
+
+.d {
+    background-color: var(--unbleached-silk);
+}
+
+.about-info .title {
+    color: var(--vermilion);
+    font-family: 'Quantico';
+    font-size: 36px;
+}
+
+.about-info .description {
+    margin-top: 40px;
+    color: var(--russian-violet)
+}
