@@ -5,6 +5,9 @@
     --vermilion: #e03616ff;
     --unbleached-silk: #ffd9ceff;
     --snow: #fcf7f8ff;
+    --pink-medium: #F8C0B5;
+    --warmer-red: #CC3314;
+
 }
 
 /* SCSS Gradient */
@@ -41,6 +44,9 @@ $gradient-radial: radial-gradient(#301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #f
 
 .header .logo {
     text-decoration: none;
+    color: var(--snow);
+    font-family: 'Quantico';
+    font-size: 36px;
 }
 
 .container {
@@ -60,13 +66,17 @@ $gradient-radial: radial-gradient(#301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #f
     height: 85vh;
 }
 
+/* .child:last-child {
+    height: 95vh;
+    top: 0;
+} */
 
-.a {
+.first {
     background-color: var(--maximum-blue-purple);
     display: flex;
 }
 
-.a .about-info {
+.first .about-info {
     flex-basis: 55%;
     display: flex;
     flex-direction: column;
@@ -74,7 +84,7 @@ $gradient-radial: radial-gradient(#301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #f
     justify-content: center;
 }
 
-.a .profile-photo {
+.first .profile-photo {
     flex-basis: 45%;
     display: flex;
     justify-content: left;
@@ -97,22 +107,22 @@ $gradient-radial: radial-gradient(#301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #f
 .photo-wrapper .photo-shadow {
     width: 350px;
     height: 350px;
-    border: 2px solid var(--snow);
+    border: 2px solid var(--unbleached-silk);
     position: absolute;
     top: 40px;
     left: 40px;
     z-index: -1;
 }
 
-.b {
+.second {
     background-color: var(--unbleached-silk);
 }
 
-.c {
+.third {
     background-color: var(--maximum-blue-purple);
 }
 
-.d {
+.fourth {
     background-color: var(--unbleached-silk);
 }
 
@@ -126,3 +136,33 @@ $gradient-radial: radial-gradient(#301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #f
     margin-top: 40px;
     color: var(--russian-violet)
 }
+
+.footer {
+    border: 1px solid orange;
+        width: 100vw;
+        height: 30px;
+        position: fixed;
+        bottom: 0;
+        background-color: transparent;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footer i {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .fa-brands {
+        color: var(--snow);
+        font-size: 20px;
+    }
+
+    .fa-brands:hover {
+        color: var(--vermilion);
+        font-size: 20px;
+    } 
+    .footer a {
+        text-decoration: none;
+    }
