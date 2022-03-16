@@ -1,13 +1,12 @@
 /* CSS HEX */
 :root {
-    --russian-violet: #301a4bff;
-    --maximum-blue-purple: #9f9fedff;
-    --vermilion: #e03616ff;
-    --unbleached-silk: #ffd9ceff;
-    --snow: #fcf7f8ff;
-    --pink-medium: #F8C0B5;
-    --warmer-red: #CC3314;
-
+  --russian-violet: #301a4bff;
+  --maximum-blue-purple: #9f9fedff;
+  --vermilion: #e03616ff;
+  --unbleached-silk: #ffd9ceff;
+  --snow: #fcf7f8ff;
+  --pink-medium: #f8c0b5;
+  --warmer-red: #cc3314;
 }
 
 /* SCSS Gradient */
@@ -21,49 +20,48 @@ $gradient-top-left: linear-gradient(225deg, #301a4bff, #9f9fedff, #e03616ff, #ff
 $gradient-bottom-left: linear-gradient(315deg, #301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff);
 $gradient-radial: radial-gradient(#301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #fcf7f8ff); */
 
-
 /* CODE */
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .header {
-    border: 1px solid orange;
-    width: 100vw;
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    padding: 0 10%;
-    display: flex;
-    align-items: center;
+  border: 1px solid orange;
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
 }
 
 .header .logo {
-    text-decoration: none;
-    color: var(--snow);
-    font-family: 'Quantico';
-    font-size: 36px;
+  text-decoration: none;
+  color: var(--snow);
+  font-family: "Quantico";
+  font-size: 36px;
 }
 
 .container {
-    scroll-snap-type: y mandatory;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .child {
-    scroll-snap-align: start;
-    width: 100vw;
-    height: 100vh;
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
 }
 
 .child:first-child {
-    height: 85vh;
+  height: 85vh;
 }
 
 /* .child:last-child {
@@ -72,97 +70,169 @@ $gradient-radial: radial-gradient(#301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #f
 } */
 
 .first {
-    background-color: var(--maximum-blue-purple);
-    display: flex;
+  background-color: var(--maximum-blue-purple);
+  display: flex;
 }
 
 .first .about-info {
-    flex-basis: 55%;
-    display: flex;
-    flex-direction: column;
-    padding: 10%;
-    justify-content: center;
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  justify-content: center;
 }
 
 .first .profile-photo {
-    flex-basis: 45%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-shrink: 0;
+  flex-basis: 45%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .profile-photo .photo-wrapper {
-    width: 60%;
-    position: relative;
-    z-index: 0;
+  width: 60%;
+  position: relative;
+  z-index: 0;
 }
 
 .photo-wrapper img {
-    width: 350px;
-    z-index: 1;
-
+  width: 350px;
+  z-index: 1;
 }
 
 .photo-wrapper .photo-shadow {
-    width: 350px;
-    height: 350px;
-    border: 2px solid var(--unbleached-silk);
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: -1;
+  width: 350px;
+  height: 350px;
+  border: 2px solid var(--unbleached-silk);
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: -1;
 }
 
 .second {
-    background-color: var(--unbleached-silk);
+  background-color: var(--unbleached-silk);
 }
 
 .third {
-    background-color: var(--maximum-blue-purple);
+  background-color: var(--maximum-blue-purple);
+
+  margin: 0;
+  padding: 0;
+}
+
+.third .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 10vh 10vw 0;
+  margin: 0;
+  height: 85vh;
+  max-width: 100vw;
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.gallery .project01 {
+  border: 1px solid red;
+  height: 70%;
+  width: 100%;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.gallery .project02 {
+  border: 1px solid red;
+  height: 70%;
+  width: 100%;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.gallery .project03 {
+  border: 1px solid red;
+  height: 70%;
+  width: 100%;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.gallery img {
+  width: 100%;
+  object-fit: cover;
+}
+.gallery .project {
+  display: flex;
+  overflow: hidden;
+}
+
+.gallery .project04 {
+  border: 1px solid red;
+  height: 70%;
+  width: 100%;
+  justify-self: center;
+  align-self: flex-start;
+}
+
+.gallery .project05 {
+  border: 1px solid red;
+  height: 70%;
+  width: 100%;
+  justify-self: center;
+  align-self: flex-start;
+}
+
+.gallery .project06 {
+  border: 1px solid red;
+  height: 70%;
+  width: 100%;
+  justify-self: center;
+  align-self: flex-start;
 }
 
 .fourth {
-    background-color: var(--unbleached-silk);
+  background-color: var(--unbleached-silk);
 }
 
 .about-info .title {
-    color: var(--vermilion);
-    font-family: 'Quantico';
-    font-size: 36px;
+  color: var(--vermilion);
+  font-family: "Quantico";
+  font-size: 36px;
 }
 
 .about-info .description {
-    margin-top: 40px;
-    color: var(--russian-violet)
+  margin-top: 40px;
+  color: var(--russian-violet);
 }
 
 .footer {
-    border: 1px solid orange;
-        width: 100vw;
-        height: 30px;
-        position: fixed;
-        bottom: 0;
-        background-color: transparent;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .footer i {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
+  border: 1px solid orange;
+  width: 100vw;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer i {
+  margin-left: 15px;
+  margin-right: 15px;
+}
 
-    .fa-brands {
-        color: var(--snow);
-        font-size: 20px;
-    }
+.fa-brands {
+  color: var(--snow);
+  font-size: 20px;
+}
 
-    .fa-brands:hover {
-        color: var(--vermilion);
-        font-size: 20px;
-    } 
-    .footer a {
-        text-decoration: none;
-    }
+.fa-brands:hover {
+  color: var(--vermilion);
+  font-size: 20px;
+}
+.footer a {
+  text-decoration: none;
+}
