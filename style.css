@@ -141,6 +141,8 @@ $gradient-radial: radial-gradient(#301a4bff, #9f9fedff, #e03616ff, #ffd9ceff, #f
   width: 100%;
   justify-self: center;
   align-self: flex-end;
+  filter: grayscale(100);
+  filter: hue-rotate(10);
 }
 
 .gallery .project02 {
